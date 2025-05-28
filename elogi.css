@@ -1,0 +1,321 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-x: hidden;
+    /* Hide horizontal scroll bar caused by animations */
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    animation: fadeIn 1s ease-out;
+}
+
+header .nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+header .nav a:hover {
+    color: #007bff;
+    /* Example hover effect */
+}
+
+.get-started-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: slideUp 0.8s ease-out 0.2s backwards;
+}
+
+.get-started-button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+    /* Simple hover animation */
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.hero-content {
+    flex: 1;
+    animation: slideUp 1s ease-out 0.4s backwards;
+}
+
+.hero-image {
+    flex: 1;
+    background-color: #ddd;
+    height: 300px;
+    margin-left: 40px;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+    animation: fadeIn 1s ease-out 0.6s backwards;
+}
+
+.hero:hover .hero-image {
+    transform: scale(1.02);
+    /* Simple hover animation */
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: slideUp 1s ease-out 0.5s backwards;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    animation: slideUp 1s ease-out 0.6s backwards;
+}
+
+.hero button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: slideUp 0.8s ease-out 0.7s backwards;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+    /* Simple hover animation */
+}
+
+.hero button:first-child {
+    background-color: #000;
+    color: #fff;
+}
+
+.hero button:last-child {
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #ccc;
+    animation-delay: 0.8s;
+}
+
+.section {
+    padding: 40px 0;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    animation: slideUp 1s ease-out backwards;
+}
+
+.service-blocks {
+    display: flex;
+    gap: 20px;
+}
+
+.service-block {
+    flex: 1;
+    background-color: #ddd;
+    height: 150px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+    animation: slideUp 1s ease-out backwards;
+}
+
+.service-block:hover {
+    transform: translateY(-10px);
+    /* Simple hover animation */
+}
+
+.service-block:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.service-block:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.content-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.content-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.content-block-image {
+    flex: 1;
+    background-color: #ddd;
+    height: 250px;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+    animation: fadeIn 1s ease-out backwards;
+}
+
+.content-block:hover .content-block-image {
+    transform: scale(1.02);
+    /* Simple hover animation */
+}
+
+.content-block-text {
+    flex: 1;
+    animation: slideUp 1s ease-out backwards;
+}
+
+.heading-blocks {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.heading-block {
+    background-color: #eee;
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.heading-block:hover {
+    transform: translateY(-5px);
+    /* Simple hover animation */
+}
+
+.heading-block:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.heading-block:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.heading-block:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.circle-image {
+    width: 200px;
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-left: 40px;
+    transition: transform 0.5s ease;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.centered-content:hover .circle-image {
+    transform: scale(1.05);
+    /* Simple hover animation */
+}
+
+.accent-heading {
+    font-weight: normal;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    color: #555;
+    animation: fadeIn 1s ease-out;
+}
+
+footer .social-icons img {
+    width: 24px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.1);
+    /* Simple hover animation */
+}
+
